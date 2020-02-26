@@ -95,9 +95,12 @@
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+// sub categories are listed as 'children' in a list
+// if it has children it needs 'expanded: false' as an attribute
+// everything starts as 'completed: false"
 /* harmony default export */ __webpack_exports__["default"] = (CharacterData = [{
   name: 'medusa',
-  image: 'none',
+  image: './images/medusa.jpg',
   inspections: [{
     name: 'inspect eyes',
     completed: false,

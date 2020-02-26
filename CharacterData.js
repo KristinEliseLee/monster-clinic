@@ -1,6 +1,11 @@
+// sub categories are listed as 'children' in a list
+// if it has children it needs 'expanded: false' as an attribute
+// everything starts as 'completed: false"
+
+
 export default CharacterData = [{
     name: 'medusa',
-    image: '',
+    image: './images/medusa.jpg',
     inspections: [
         {
             name: 'inspect eyes',
