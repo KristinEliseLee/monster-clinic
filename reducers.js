@@ -1,4 +1,4 @@
-import CharacterData from './CharacterData'
+import CharacterInfo from './CharacterInfo'
 import { CHANGE_VIEW, TOGGLE_EXPAND, INSPECT } from './actions'
 
 const _ = require('lodash');
@@ -16,7 +16,7 @@ export function rootReducer(state = initialState, action) {
     switch (action.type) {
         case CHANGE_VIEW:
             if (action.view != 'waitingroom') {
-                cloneState.monster = _.cloneDeep(CharacterData[action.view.monster]);
+                cloneState.monster = _.cloneDeep(CharacterInfo[action.view.monster]);
                 cloneState.view = action.view.view;
             }
             else {
@@ -38,9 +38,9 @@ export function rootReducer(state = initialState, action) {
             const parents = [];
             path = action.monster.path.split(":");
             current = cloneState.monster.inspections[path[0]];
-            for (let item of path.slice(1)) {
+            for (let index of path.slice(1)) {
                 parents.push(current)
-                current = current.children[item];
+                current = current.children[index];
             }
             cloneState.results = { results: current.results, question: current.name };
             current.completed = true;
@@ -53,7 +53,7 @@ export function rootReducer(state = initialState, action) {
                         break;
                     }
                 }
-                parent.completed = true;
+                parent.completed = lower_level_complete;
                 parent = parents.pop();
             }
             break;
