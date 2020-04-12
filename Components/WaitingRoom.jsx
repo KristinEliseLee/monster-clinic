@@ -1,7 +1,8 @@
 const React = require('react');
-const _ = require('lodash')
-import CharacterInfo from '../CharacterInfo'
-import handleChangeView from '../Handlers/handleChangeView'
+const _ = require('lodash');
+import CharacterInfo from '../CharacterInfo';
+import handleChangeView from '../Handlers/handleChangeView';
+import Button from '@material-ui/core/Button';
 
 
 
