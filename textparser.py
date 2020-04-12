@@ -28,7 +28,7 @@ for text in text_files:
 
         for row in csv_reader:
             answer = row[-1]
-            points = row[-2]
+            points = [x.lower() for x in row[-2].split(" ")]
             for i in range(len(row)-3, 0, -1):
                 if row[i]:
                     q_index = i
@@ -39,7 +39,7 @@ for text in text_files:
                 'name':q,
                 'results': answer,
                 'completed':False,
-                'points':points.split(' ')
+                'points':points
                  }
             current_dict = parent_dict
             row = row[1:q_index]
