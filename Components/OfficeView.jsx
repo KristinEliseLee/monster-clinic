@@ -15,7 +15,7 @@ function ConnectedOfficeView(props) {
     }
     return (<React.Fragment>
         <h1> Office View </h1>
-        <Button variant="outline-secondary"
+        <Button variant="primary"
             onClick={handleChangeView()}>
             Return to waiting room
                 </Button>
