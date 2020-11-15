@@ -35,4 +35,17 @@ body {
 #answer {
     text-align: center;
 }
+
+#death {
+    color: darkred;
+    background-color: red;
+    opacity: .8;
+    position: absolute;
+    top:0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    padding: 30px;
+    text-align: center;
+}
 /* global styling end */

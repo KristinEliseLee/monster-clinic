@@ -18,6 +18,7 @@ export function rootReducer(state = initialState, action) {
             if (action.view != 'waitingroom') {
                 cloneState.monster = _.cloneDeep(CharacterInfo[action.view.monster]);
                 cloneState.view = action.view.view;
+                cloneState.results = initialState.results;
             }
             else {
                 return initialState
