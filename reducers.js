@@ -1,4 +1,4 @@
-import CharacterInfo from './CharacterInfo'
+import CharacterInfo from './characterinfo'
 import { CHANGE_VIEW, TOGGLE_EXPAND, INSPECT } from './actions'
 
 const _ = require('lodash');
