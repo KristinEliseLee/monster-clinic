@@ -20,8 +20,14 @@ function ConnectedOfficeView(props) {
             Return to waiting room
                 </Button>
 
-        <div id="inspect"> {inspectList} </div>
-        <div id="picture"><img src={props.monster.image} /></div>
+        <div id="officeView">
+            <div id="inspect"> {inspectList} </div>
+            <img id="picture" src={props.monster.image} />
+        </div>
+        <div id="resultsBox">
+            <h4 id="question"> {props.results.question}</h4>
+            <p id="answer"> {props.results.results} </p>
+        </div>
     </React.Fragment>)
 }
 

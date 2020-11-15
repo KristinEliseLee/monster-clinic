@@ -1,7 +1,7 @@
 import csv
 import json
 
-text_files = ['./character_data/bandit.csv']
+text_files = ['./character_data/bandit.csv','./character_data/cyclops.csv','./character_data/gnome.csv','./character_data/goblin.csv','./character_data/hobgoblin.csv','./character_data/mummy.csv', ]
 
 text = text_files[0]
 character_dict = {}

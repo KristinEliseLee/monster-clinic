@@ -13,4 +13,26 @@ body {
     text-decoration:line-through;
 }
 
+#inspect {
+    padding: 20px;
+}
+
+#picture {
+    height: 500px;
+}
+
+#officeView {
+    display: flex
+}
+
+#resultsBox {
+    border: 1px solid black;
+}
+
+#question {
+    text-align: center;
+}
+#answer {
+    text-align: center;
+}
 /* global styling end */
