@@ -1,7 +1,20 @@
 import csv
 import json
 
-text_files = ['./character_data/bandit.csv','./character_data/cyclops.csv','./character_data/gnome.csv','./character_data/goblin.csv','./character_data/hobgoblin.csv','./character_data/mummy.csv', ]
+text_files = [
+    './character_data/bandit.csv',
+    './character_data/cyclops.csv',
+    './character_data/gnome.csv',
+    './character_data/goblin.csv',
+    './character_data/hobgoblin.csv',
+    './character_data/mummy.csv', 
+    './character_data/medusa.csv', 
+    './character_data/vampire.csv', 
+    './character_data/merperson.csv', 
+    './character_data/golem.csv', 
+    './character_data/ghost.csv', 
+    './character_data/genie.csv', 
+    ]
 
 text = text_files[0]
 character_dict = {}
@@ -24,12 +37,12 @@ for text in text_files:
         }
         current_dict = current_dict['inspections']
         parent_dict = current_dict
-        dict_stack = []
+        dict_stack = [current_dict]
 
         for row in csv_reader:
             answer = row[-1]
             points = [x.lower() for x in row[-2].split(" ")]
-            for i in range(len(row)-3, 0, -1):
+            for i in range(len(row)-3, -1, -1):
                 if row[i]:
                     q_index = i
                     break
@@ -55,13 +68,13 @@ for text in text_files:
                     current_dict['children'].append(new_dict)
                     current_dict = new_dict
                     if len(dict_stack) > i+1 :
-                        dict_stack[i] = current_dict
-                        dict_stack = dict_stack[:i+1]
+                        dict_stack[i+1] = current_dict
+                        dict_stack = dict_stack[:i+2]
                     else:
                         dict_stack.append(current_dict)
 
                 else:
-                    current_dict = dict_stack[i]
+                    current_dict = dict_stack[i+1]
 
             current_dict['children'].append(q_dict)
 

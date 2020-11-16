@@ -1,7 +1,10 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\Components",
+    "\\Handlers",
+    "\\images"
   ],
-  "SelectedNode": "\\textparser.py",
+  "SelectedNode": "\\reducers.js",
   "PreviewInSolutionExplorer": false
 }
