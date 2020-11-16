@@ -2,18 +2,18 @@ import csv
 import json
 
 text_files = [
-    './character_data/bandit.csv',
-    './character_data/cyclops.csv',
-    './character_data/gnome.csv',
-    './character_data/goblin.csv',
-    './character_data/hobgoblin.csv',
-    './character_data/mummy.csv', 
-    './character_data/medusa.csv', 
-    './character_data/vampire.csv', 
-    './character_data/merperson.csv', 
-    './character_data/golem.csv', 
-    './character_data/ghost.csv', 
-    './character_data/genie.csv', 
+    './character_data/MonsterClinicCharacterData - Medusa.csv',
+    './character_data/MonsterClinicCharacterData - HumanBandit.csv',
+    './character_data/MonsterClinicCharacterData - Vampire.csv',
+    './character_data/MonsterClinicCharacterData - hobgoblin.csv',
+    './character_data/MonsterClinicCharacterData - gnome.csv',
+    './character_data/MonsterClinicCharacterData - Cyclops.csv',
+    './character_data/MonsterClinicCharacterData - Mummy.csv',
+    './character_data/MonsterClinicCharacterData - Ghost.csv',
+    './character_data/MonsterClinicCharacterData - Genie.csv',
+    './character_data/MonsterClinicCharacterData - Merperson.csv',
+    './character_data/MonsterClinicCharacterData - Golem.csv',
+    './character_data/MonsterClinicCharacterData - goblin.csv',
     ]
 
 text = text_files[0]
